@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="adr" class= "com.Nani.Address">
+<property name="strt" value="SBI COLONY"></property>
+<property name="city" value="Madanapalli"></property>
+<property name="state" value="Ap"></property>
+</bean>
+
+<bean id="cst" class= "com.Nani.Customer">
+<property name="id" value="2425"></property>
+<property name="name" value="Reddy Shekhar"></property>
+<property name="email" value="rs2425@gmail.com"></property>
+<property name="adr" ref="adr"></property>
+</bean>
+
+<bean id="adr1" class= "com.Nani.Address">
+<constructor-arg name= "strt" value = "Ntr Circle"></constructor-arg>
+<constructor-arg name= "city" value = "Madanapalli"></constructor-arg>
+<constructor-arg name= "state" value = "Ap"></constructor-arg>
+</bean>
+
+<bean id="cst1" class= "com.Nani.Customer">
+<constructor-arg name= "id" value = "24"></constructor-arg>
+<constructor-arg name= "name" value= "Shekhar"></constructor-arg>
+<constructor-arg name= "email" value= "nani@gmail.com"></constructor-arg>
+<constructor-arg name="adr" ref= "adr1"></constructor-arg>
+</bean>
+</beans>
